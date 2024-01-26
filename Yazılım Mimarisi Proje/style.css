@@ -1,0 +1,188 @@
+* {
+  /* PENCERENİN GENELİNDE UYGULANILAN YERLEŞTİRME KODLARI */
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+body {
+  /* WEB SİTESİNİN BOYUTUNU VE KONUMLANDIRIŞININ YAPILDIĞI KODLAR */
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #bdc3cb;
+}
+.wrapper {
+  /* TABLONUN BOYUTUNU VE RENK ÖZELLİKLERİNİN OLDUĞU KODLAR */
+  position: relative;
+  width: 400px;
+  height: 105px;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 28px 32px;
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+  transition: 0.6s ease-out;
+}
+.search{
+  /* ARATILACAK KONUMUN BULUNDUĞU ALANIN KONUMLANDIRILMA VE BOYUT KODLARI */
+  width: 100%;
+  height: min-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.search input{
+  /* KONUM GİRDİSİNİN RENK VE YAZI TİPİ KODLARI */
+  width: 80%;
+  color: #062B3D;
+  padding-left: 32px;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 500;
+}
+.search input::placeholder{
+  /* ARAMA KISMINDA STANDERT GÖZÜKECEK YAZI KODLARI */
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: #062B3D;
+}
+.search button{
+  /* ARAMA BUTONUNUN BOYUT VE RENK KODLARI */
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  color: #062B3D;
+  background: #dff6ff;
+  border-radius: 50%;
+  font-size: 22px;
+  transition: 0.4s ease;
+}
+.search button:hover{
+  /* ARAMA BUTONUNUN ÜSTÜNE CURSOR GELDİĞİNDE OLACAK DEĞİŞİKLİKLER */
+  color: #fff;
+  background: #062B3D;
+}
+.search i{
+  /* İCONUN RENK VE BOYUT KODLARI */
+  position: absolute;
+  color: #062B3D;
+  font-size: 28px;
+}
+.weather{
+  /* HAVA DURUMU BİGİLERİNİN OLDUĞU YAZILARIN METİN HİZZALAMALARI */
+  text-align: center;
+}
+.weather img{
+  /* HAVA DURUMUNUN GÖRSELLERİNİN BOYUT VE KONUMLANDIRMA KODLARI */
+  width: 60%;
+  margin-top: 30px;
+}
+.weather .tempature{
+  /* DERECE ALANININ RENK VE BOYUT AYARLARI */
+  position: relative;
+  color: #062B3D;
+  font-size: 4rem;
+  font-weight: 800;
+  margin-top: 30px;
+  margin-left: -16px;
+}
+.weather .tempature span{
+  position: absolute;
+  margin-left: 4px;
+  font-size: 1.5rem;
+
+}
+.weather .description{
+  /* HAVA DURUMU AÇIKLAMARININ RENK VE BOYUT AYARLARI */
+  color: #062B3D;
+  font-size: 22px;
+  font-weight: 500;
+  text-transform: capitalize;
+
+}
+.weather-details{
+  /* HAVA DURUMU BİLGİLERİNİN KONUM VE BOYUT AYARI */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: 30px;
+}
+.weather-details .humidity, .weather-details .wind{
+  /* NEM ORANI VE RÜZGAR HIZININ ORTAK BOYUT KODLARI */
+  display: flex;
+  align-items: center;
+  width: 50%;
+  height: 100px;
+}
+.weather-details .humidity{
+  /* NEM ORANININ RENK VE BOYUT AYARI */
+  padding-left: 20px;
+  justify-content: flex-start;
+}
+.weather-details .wind{
+  /* RÜZGAR HIZININ RENK VE BOYUT AYARI */
+  padding-right: 20px;
+  justify-content: flex-end;
+}
+.weather-details i{
+  /* HAVA BİLGİLERİNİN RENK VE BOYUT AYARI */
+  color: #062B3D;
+  font-size: 26px;
+  margin-right: 10px;
+  margin-top: 6px;
+}
+.weather-details span{
+  /* HAVA BİLGİLERİNİN RENK VE BOYUT AYARI */
+  color: #062B3D;
+  font-size: 22px;
+  font-weight: 500;
+}
+.weather-details p{
+  /* HAVA BİLGİLERİNİN RENK VE BOYUT AYARI */
+  color: #062B3D;
+  font-size: 14px;
+  font-weight: 500;
+}
+.not-found{
+  /* HATA KISMININ BOYUTLANDIRMA VE KONUM AYARLARI */
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+  scale: 0;
+  opacity: 0;
+  display: none;
+}
+.not-found img{
+  /* HATA GÖRSELİNİN BOYUTU */
+  width: 70%;
+}
+.not-found p{
+  /* HATA ALINDIĞINDA GÖSTERİLECEK METİNİN AYARLARI */
+  color: #062B3D;
+  font-size: 22px;
+  font-weight: 500;
+  margin-top: 12px;
+}
+.weather, .weather-details{
+  /* BU KODLAR JS İLE GÖSTERİLECEK */
+  scale: 0;
+  opacity: 0;
+
+} 
+.fadeIn{
+  /* ANİMASYON KODLARI */
+  animation: 0.5s fadeIn forwards;
+  animation-delay: 0.5s;
+}
+@keyframes fadeIn{
+  to{
+    scale: 1;
+      opacity: 1;
+  }
+}
+

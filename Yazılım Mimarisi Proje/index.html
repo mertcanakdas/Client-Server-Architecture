@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hava Durumu</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" /> <!-- CSS KODLARININ BAĞLANDIĞI KISIM-->
+  </head>
+  <body>
+
+    <div class="wrapper">
+      <div class="search">
+        <i class="fa-solid fa-location-dot"></i>
+        <input type="text" placeholder="Konum giriniz" />
+        <button class="fa-solid fa-magnifying-glass"></button>
+      </div>
+
+      <div class="not-found"> <!-- HATALI KONUM GİRİLDİĞİNDE GÖSTERİLECEK KOD BLOGU-->
+        <img src="icons/404.png" />
+        <p>Hay aksi! Geçersiz Konum girdiniz :/</p>
+      </div>
+
+      <div class="weather">
+        <img src="" />
+        <p class="temperature"></p> <!-- TABLODAKİ DERECE KISIM-->
+        <p class="description"></p> <!-- HAVA DURUMUNUN AÇIKANDĞI KISIM-->
+      </div>
+
+      <div class="weather-details">
+        <div class="humidity"> <!-- NEM ORANINI GÖSTEREN KISIM-->
+          <i class="fa-solid fa-water"></i>
+          <div class="text">
+            <span></span>
+            <p>Nem Oranı</p>
+          </div>
+        </div>
+        <div class="wind"> <!-- RÜZGAR HIZINI GÖSTEREN KISIM-->
+          <i class="fa-solid fa-wind"></i>
+          <div class="text">
+            <span></span>
+            <p>Rüzgar Hızı</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/7c8801c017.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script> <!-- JAVASCRIPT KODLARININ BAĞLANDIĞI YER-->
+  </body>
+</html>
