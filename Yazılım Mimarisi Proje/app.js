@@ -8,7 +8,7 @@ const error404 = document.querySelector('.not-found'); // HATA SINIFINA ERİŞT�
 // İSTEMCİ SUNUCU MİMARİSİNİN ANA KISMI
 search.addEventListener('click', () => {
 
-    const APIKey = 'bfd4c7d6297586b9f1b60672d0b41413'; // SUNUCUYA ERİŞMEK İÇİN KULLANDIĞIMIZ KİŞİSEL ANAHTAR
+    const APIKey = 'Your API Key'; // SUNUCUYA ERİŞMEK İÇİN KULLANDIĞIMIZ KİŞİSEL ANAHTAR
     const city = document.querySelector('.search input').value; // ŞEHİR İNPUTUNU ALDIĞIMIZ KOD
     
     if (city === '')
